@@ -1,0 +1,9 @@
+[submodule "site-lisp/eproject"]
+	path = site-lisp/eproject
+	url = https://github.com/jrockway/eproject.git
+[submodule "site-lisp/js2-mode"]
+	path = site-lisp/js2-mode
+	url = https://github.com/mooz/js2-mode.git
+[submodule "site-lisp/robot-mode"]
+	path = site-lisp/robot-mode
+	url = https://github.com/danjacka/robot-mode.git

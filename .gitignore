@@ -1,0 +1,9 @@
+*.elc
+/elpa
+/auto-save-list
+/eshell
+/.mc-lists.el
+/.places
+/session.*
+/tramp
+/url
