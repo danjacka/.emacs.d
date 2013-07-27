@@ -7,10 +7,6 @@
 (add-to-list 'load-path user-emacs-directory)
 (add-to-list 'load-path site-lisp-dir)
 
-;; Set up path to settings that live outside .emacs.d (credentials, etc.)
-(setq expat-settings-dir "~/.emacs-expat/")
-(add-to-list 'load-path expat-settings-dir)
-
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
   (when (file-directory-p project)
@@ -111,6 +107,7 @@
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
 
-;; Conclude init by loading expat settings
+;; Load 'expat' settings from outside .emacs.d (credentials, etc.)
+(setq expat-settings-dir "~/.emacs-expat/")
 (when (file-exists-p expat-settings-dir)
   (mapc 'load (directory-files expat-settings-dir t "^[^#].*el$")))
