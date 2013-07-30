@@ -55,6 +55,7 @@
    (cons 'nginx-mode marmalade)
    (cons 'nrepl marmalade)
    (cons 'org gnu)
+   (cons 'php-mode marmalade)
    (cons 'rainbow-mode gnu)
    (cons 'smex marmalade)
    (cons 'zenburn-theme marmalade)))
@@ -76,6 +77,7 @@
 (require 'setup-eshell)
 
 ;; Language-specific setup files
+(require 'setup-php-mode)
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
 

@@ -10,7 +10,7 @@
 (add-to-list 'auto-mode-alist '("\\.zcml$" . xml-mode))
 
 ;; HTML mode
-(add-to-list 'auto-mode-alist '("\\.\\(html\\|pt\\|cpt\\)$" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(html\\|pt\\|cpt\\|ss\\)$" . html-mode))
 
 ;; Rainbow mode for RGB values in CSS
 (add-hook 'css-mode-hook 'rainbow-mode)
