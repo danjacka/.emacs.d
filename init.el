@@ -48,6 +48,7 @@
    (cons 'expand-region marmalade)
    (cons 'flymake-python-pyflakes marmalade)
    (cons 'inf-ruby marmalade)
+   (cons 'jabber marmalade)
    (cons 'magit marmalade)
    (cons 'markdown-mode marmalade)
    (cons 'monokai-theme marmalade)
