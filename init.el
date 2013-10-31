@@ -43,6 +43,7 @@
   (packages-install
    (cons 'ace-jump-mode marmalade)
    (cons 'clojure-mode marmalade)
+   (cons 'csv-mode gnu)
    (cons 'erc-hl-nicks marmalade)
    (cons 'etags-select marmalade)
    (cons 'expand-region marmalade)
