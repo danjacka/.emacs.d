@@ -55,7 +55,7 @@
    (cons 'monokai-theme marmalade)
    (cons 'multiple-cursors marmalade)
    (cons 'nginx-mode marmalade)
-   (cons 'nrepl marmalade)
+   (cons 'cider marmalade)
    (cons 'org gnu)
    (cons 'php-mode marmalade)
    (cons 'rainbow-mode gnu)
