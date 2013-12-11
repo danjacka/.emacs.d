@@ -6,7 +6,7 @@
 
 ;; Add third party archives
 (add-to-list 'package-archives marmalade)
-;(add-to-list 'package-archives melpa t)
+(add-to-list 'package-archives melpa t)
 
 (package-initialize)
 

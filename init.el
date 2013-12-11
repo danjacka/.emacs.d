@@ -42,6 +42,7 @@
 (defun init--install-packages ()
   (packages-install
    (cons 'ace-jump-mode marmalade)
+   (cons 'cider melpa)
    (cons 'clojure-mode marmalade)
    (cons 'csv-mode gnu)
    (cons 'erc-hl-nicks marmalade)
@@ -55,12 +56,12 @@
    (cons 'monokai-theme marmalade)
    (cons 'multiple-cursors marmalade)
    (cons 'nginx-mode marmalade)
-   (cons 'cider marmalade)
    (cons 'org gnu)
    (cons 'php-mode marmalade)
    (cons 'rainbow-mode gnu)
    (cons 'smex marmalade)
-   (cons 'zenburn-theme marmalade)))
+   (cons 'zenburn-theme marmalade)
+   (cons 'virtualenvwrapper melpa)))
 
 (condition-case nil
     (init--install-packages)

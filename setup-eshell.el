@@ -10,4 +10,7 @@
 ;; *Python* buffer. That buffer's default-directory variable is used as the
 ;; *current working directory.
 
+;; Have virtualenvwrapper.el commands available from an Eshell
+(venv-initialize-eshell)
+
 (provide 'setup-eshell)
