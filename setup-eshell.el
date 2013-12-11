@@ -11,6 +11,7 @@
 ;; *current working directory.
 
 ;; Have virtualenvwrapper.el commands available from an Eshell
+(require 'virtualenvwrapper)
 (venv-initialize-eshell)
 
 (provide 'setup-eshell)
