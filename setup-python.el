@@ -46,9 +46,16 @@
   (setq python-run-python-last-cmd (ad-get-arg 0)))
 
 (defun python-shell-repeat-python ()
+  "Repeat the last shell command that started Python"
   (interactive)
   (python-kill-python)
   (funcall #'run-python python-run-python-last-cmd nil nil))
+
+(defun python-shell-interactive-interpreter ()
+  "Start an interactive interpreter in the Python shell"
+  (interactive)
+  (insert "!import code; code.interact(local=vars())")
+  (comint-send-input))
 
 ;; Bits & bobs
 (defun annotate-pdb ()
@@ -58,6 +65,8 @@
 (python-skeleton-define pdb "Insert PDB breakpoint."
   nil
   \n "import pdb; pdb.set_trace()")
+
+
 
 ;; Keybindings
 (define-key python-mode-map (kbd "C-c C-i") 'igor)
