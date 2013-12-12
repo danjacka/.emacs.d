@@ -58,6 +58,7 @@
    (cons 'nginx-mode marmalade)
    (cons 'org gnu)
    (cons 'php-mode marmalade)
+   (cons 'projectile melpa)
    (cons 'rainbow-mode gnu)
    (cons 'smex marmalade)
    (cons 'zenburn-theme marmalade)
@@ -87,6 +88,7 @@
 ;; Use project files
 (require 'setup-eproject)
 (require 'eproject-plone)
+(require 'setup-projectile)
 
 ;; Map files to modes
 (require 'mode-mappings)

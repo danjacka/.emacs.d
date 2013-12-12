@@ -4,6 +4,7 @@
 /eshell
 /.mc-lists.el
 /.places
+/projectile-bookmarks.eld
 /session.*
 /tramp
 /url
