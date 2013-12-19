@@ -59,6 +59,7 @@
    (cons 'org gnu)
    (cons 'php-mode marmalade)
    (cons 'projectile melpa)
+   (cons 'pydoc-info melpa)
    (cons 'rainbow-mode gnu)
    (cons 'smex marmalade)
    (cons 'zenburn-theme marmalade)
