@@ -1,10 +1,5 @@
 (require 'magit-svn)
 
-;; Subtler highlight
-(set-face-attribute 'magit-item-highlight nil :underline nil)
-(set-face-foreground 'diff-added "#00cc33")
-(set-face-foreground 'diff-removed "#ff0000")
-
 ;; Load git configurations
 ;; For instance, to run magit-svn-mode in a project, do:
 ;;
