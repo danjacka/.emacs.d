@@ -77,6 +77,7 @@
           '(lambda ()
              (annotate-pdb)
              (flymake-python-pyflakes-load)
-             (setq fill-column 78)))
+             (setq fill-column 78)
+             (subword-mode 1)))
 
 (provide 'setup-python)
