@@ -42,9 +42,11 @@
 (defun init--install-packages ()
   (packages-install
    (cons 'ace-jump-mode marmalade)
+   (cons 'anzu melpa)
    (cons 'cider melpa)
    (cons 'clojure-mode marmalade)
    (cons 'csv-mode gnu)
+   (cons 'diminish marmalade)
    (cons 'erc-hl-nicks marmalade)
    (cons 'etags-select marmalade)
    (cons 'expand-region marmalade)
@@ -102,6 +104,11 @@
 
 ;; Smart M-x is smart
 (smex-initialize)
+
+;; Anzu shows isearch match count
+(require 'anzu)
+(diminish 'anzu-mode)
+(global-anzu-mode)
 
 ;; Setup key mappings
 (require 'key-bindings)
