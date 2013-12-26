@@ -15,10 +15,6 @@
 ;; Rainbow mode for RGB values in CSS
 (add-hook 'css-mode-hook 'rainbow-mode)
 
-;; Robot Framework mode
-(autoload 'robot-mode "robot-mode" nil t)
-(add-to-list 'auto-mode-alist '("\\.robot$" . robot-mode))
-
 ;; Ruby
 (add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
 (add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))

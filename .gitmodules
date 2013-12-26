@@ -1,3 +1,0 @@
-[submodule "site-lisp/robot-mode"]
-	path = site-lisp/robot-mode
-	url = https://github.com/danjacka/robot-mode.git
