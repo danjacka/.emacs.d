@@ -1,6 +1,3 @@
-[submodule "site-lisp/js2-mode"]
-	path = site-lisp/js2-mode
-	url = https://github.com/mooz/js2-mode.git
 [submodule "site-lisp/robot-mode"]
 	path = site-lisp/robot-mode
 	url = https://github.com/danjacka/robot-mode.git
