@@ -56,6 +56,7 @@
      jabber
      js2-mode
      magit
+     magit-svn
      markdown-mode
      monokai-theme
      multiple-cursors
