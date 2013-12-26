@@ -62,7 +62,6 @@
      multiple-cursors
      nginx-mode
      org
-     php-mode
      projectile
      pydoc-info
      rainbow-mode
@@ -87,7 +86,6 @@
 (require 'setup-eshell)
 
 ;; Language-specific setup files
-(require 'setup-php-mode)
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
 
