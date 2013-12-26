@@ -41,31 +41,31 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   (cons 'ace-jump-mode marmalade)
-   (cons 'anzu melpa)
-   (cons 'cider melpa)
-   (cons 'clojure-mode marmalade)
-   (cons 'csv-mode gnu)
-   (cons 'diminish marmalade)
-   (cons 'erc-hl-nicks marmalade)
-   (cons 'etags-select marmalade)
-   (cons 'expand-region marmalade)
-   (cons 'flymake-python-pyflakes marmalade)
-   (cons 'inf-ruby marmalade)
-   (cons 'jabber marmalade)
-   (cons 'magit marmalade)
-   (cons 'markdown-mode marmalade)
-   (cons 'monokai-theme marmalade)
-   (cons 'multiple-cursors marmalade)
-   (cons 'nginx-mode marmalade)
-   (cons 'org gnu)
-   (cons 'php-mode marmalade)
-   (cons 'projectile melpa)
-   (cons 'pydoc-info melpa)
-   (cons 'rainbow-mode gnu)
-   (cons 'smex marmalade)
-   (cons 'zenburn-theme marmalade)
-   (cons 'virtualenvwrapper melpa)))
+   '(ace-jump-mode
+     anzu
+     cider
+     clojure-mode
+     csv-mode
+     dash
+     diminish
+     erc-hl-nicks
+     expand-region
+     flymake-python-pyflakes
+     inf-ruby
+     jabber
+     magit
+     markdown-mode
+     monokai-theme
+     multiple-cursors
+     nginx-mode
+     org
+     php-mode
+     projectile
+     pydoc-info
+     rainbow-mode
+     smex
+     zenburn-theme
+     virtualenvwrapper)))
 
 (condition-case nil
     (init--install-packages)
