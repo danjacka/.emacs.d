@@ -48,6 +48,7 @@
      csv-mode
      dash
      diminish
+     discover
      eproject
      erc-hl-nicks
      expand-region
@@ -127,3 +128,7 @@
 (setq expat-settings-dir "~/.emacs-expat/")
 (when (file-exists-p expat-settings-dir)
   (mapc 'load (directory-files expat-settings-dir t "^[^#].*el$")))
+
+;; Experimental discover mode
+;; http://www.masteringemacs.org/articles/2013/12/21/discoverel-discover-emacs-context-menus/
+(global-discover-mode 1)
