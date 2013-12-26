@@ -48,11 +48,13 @@
      csv-mode
      dash
      diminish
+     eproject
      erc-hl-nicks
      expand-region
      flymake-python-pyflakes
      inf-ruby
      jabber
+     js2-mode
      magit
      markdown-mode
      monokai-theme
