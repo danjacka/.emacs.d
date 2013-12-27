@@ -109,7 +109,6 @@
 
 ;; Anzu shows isearch match count
 (require 'anzu)
-(diminish 'anzu-mode)
 (global-anzu-mode)
 
 ;; Setup key mappings

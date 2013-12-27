@@ -18,5 +18,8 @@
   (setq cursor-type nil)
   (text-scale-increase 16))
 
+;; Unclutter the modeline
+(require 'diminish)
+(eval-after-load "anzu" '(diminish 'anzu-mode))
 
 (provide 'appearance)
