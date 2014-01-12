@@ -9,8 +9,14 @@
 ;; Load themes
 (load-theme 'zenburn t)
 
+;; Highlight current line
+(global-hl-line-mode 1)
+
 ;; Highlight matching brackets
 (show-paren-mode t)
+
+;; Don't defer screen updates when performing operations
+(setq redisplay-dont-pause t)
 
 ;; Big letters please urchins
 (defun urchin-mode ()
