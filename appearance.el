@@ -1,6 +1,3 @@
-;; Nice font
-(set-face-attribute 'default nil :font "DejaVu Sans Mono-10")
-
 ;; Turn off unnecessary UI elements
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
