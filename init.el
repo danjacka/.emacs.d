@@ -54,7 +54,6 @@
      expand-region
      flymake-python-pyflakes
      inf-ruby
-     jabber
      js2-mode
      magit
      magit-svn
