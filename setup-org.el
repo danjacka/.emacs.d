@@ -11,6 +11,9 @@
 ;; Date format for Calendar/Diary
 (setq-default calendar-date-style 'european)
 
+;; A watched pot never boils
+(setq org-clock-clocked-in-display nil)
+
 ;; Export options
 (setq org-export-with-section-numbers nil)
 (setq org-html-include-timestamps nil)
