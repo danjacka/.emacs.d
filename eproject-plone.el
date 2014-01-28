@@ -1,3 +1,9 @@
+;; Use eproject for Plone projects. eproject is currently better for Plone than
+;; projectile because eproject:
+;; - recognises buildout.cfg + versions.cfg as a project;
+;; - can ignore irrelevant files and directories;
+;; - allows generating a TAGS file using a complex etags invocation.
+
 (define-project-type plone (generic)
   (and (look-for "buildout.cfg") (look-for "versions.cfg"))
   :irrelevant-files ("bin/" "develop-eggs/" "fake-eggs/" "parts/" "var/" "*.py?" "*.egg-info")
