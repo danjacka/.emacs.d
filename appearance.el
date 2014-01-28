@@ -24,5 +24,6 @@
 ;; Unclutter the modeline
 (require 'diminish)
 (eval-after-load "anzu" '(diminish 'anzu-mode))
+(eval-after-load "hi-lock" '(diminish 'hi-lock-mode))
 
 (provide 'appearance)
