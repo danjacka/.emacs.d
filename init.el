@@ -63,6 +63,7 @@
      nginx-mode
      org
      projectile
+     protobuf-mode
      pydoc-info
      rainbow-mode
      smex
