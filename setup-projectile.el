@@ -7,12 +7,10 @@
 ;; ((nil . ((projectile-mode . t))))
 
 ;; Regard `projectile-mode' directory variables as safe
-(setq safe-local-variable-values
-      (cons '(projectile-mode . t) safe-local-variable-values))
+(add-to-list 'safe-local-variable-values '(projectile-mode . t))
 
 ;; Ignore .svn directories
-(setq projectile-globally-ignored-directories
-      (cons ".svn" projectile-globally-ignored-directories))
+(add-to-list 'projectile-globally-ignored-directories ".svn")
 (setq projectile-svn-command "find . -type f -not -iwholename '*.svn/*' -print0")
 
 ;; Explicitly build TAGS with ctags-exuberant
