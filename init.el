@@ -116,7 +116,7 @@
 
 ;; Misc
 (require 'appearance)
-(require 'misc)
+(require 'miscellaneous)
 (when (equal system-type 'gnu/linux) (require 'linux))
 
 ;; Run at full power
