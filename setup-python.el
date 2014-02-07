@@ -1,4 +1,5 @@
-; mr.igor remembers Python imports
+;;; mr.igor remembers Python imports
+
 (defun igor ()
   "Run the current buffer through mr.igor."
   (interactive)
@@ -20,7 +21,9 @@
           (message "igor: added %d imports" (- lines-after lines-before))))
       (delete-file tempfile))))
 
-;; Python process control
+
+;;; Python process control
+
 (defun python-kill-python ()
   (interactive)
   (save-excursion
@@ -52,32 +55,33 @@
   (funcall #'run-python python-run-python-last-cmd nil nil))
 
 (defun python-shell-interactive-interpreter ()
-  "Start an interactive interpreter in the Python shell"
+  "Start an interactive interpreter from pdb"
   (interactive)
   (insert "!import code; code.interact(local=vars())")
   (comint-send-input))
 
-;; Bits & bobs
-(defun annotate-pdb ()
-  (interactive)
-  (highlight-lines-matching-regexp "^[ ]*import pdb; pdb.set_trace()"))
+
+;;; Skeletons
 
 (python-skeleton-define pdb "Insert PDB breakpoint."
   nil
   \n "import pdb; pdb.set_trace()")
 
 
+;;; Keybindings
 
-;; Keybindings
 (define-key python-mode-map (kbd "C-c C-i") 'igor)
 (define-key python-mode-map (kbd "C-c C-t p") 'python-skeleton-pdb)
 
-;; Mode hook
-(add-hook 'python-mode-hook
-          '(lambda ()
-             (annotate-pdb)
-             (flymake-python-pyflakes-load)
-             (setq fill-column 78)
-             (subword-mode 1)))
+
+;;; Mode hook
+
+(add-hook
+ 'python-mode-hook
+ '(lambda ()
+    (highlight-lines-matching-regexp "^[ ]*import pdb; pdb.set_trace()")
+    (flymake-python-pyflakes-load)
+    (setq fill-column 78)
+    (subword-mode 1)))
 
 (provide 'setup-python)
