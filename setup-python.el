@@ -45,9 +45,6 @@
 (defvar python-run-python-last-cmd nil
   "The command argument that run-python was last invoked with.")
 
-(defadvice run-python (after remember-python activate)
-  (setq python-run-python-last-cmd (ad-get-arg 0)))
-
 (defun python-shell-repeat-python ()
   "Repeat the last shell command that started Python"
   (interactive)
@@ -74,7 +71,7 @@
 (define-key python-mode-map (kbd "C-c C-t p") 'python-skeleton-pdb)
 
 
-;;; Mode hook
+;;; Mode hooks
 
 (add-hook
  'python-mode-hook
@@ -83,5 +80,11 @@
     (flymake-python-pyflakes-load)
     (setq fill-column 78)
     (subword-mode 1)))
+
+(add-hook
+ 'inferior-python-mode-hook
+ '(lambda ()
+    (setq python-run-python-last-cmd cmd)))
+
 
 (provide 'setup-python)
