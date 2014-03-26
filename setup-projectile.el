@@ -5,6 +5,7 @@
 ;; global mode; only activate Projectile where projects have a manually-added
 ;; .dir-locals.el in the root directory containing:
 ;; ((nil . ((projectile-mode . t))))
+;; Add an empty .projectile file to manually set the project root directory.
 
 ;; Regard `projectile-mode' directory variables as safe
 (add-to-list 'safe-local-variable-values '(projectile-mode . t))

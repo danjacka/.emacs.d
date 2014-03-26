@@ -27,9 +27,6 @@
 ;; Don't expire cached passwords
 (setq password-cache-expiry nil)
 
-;; TRAMP config
-(setq tramp-default-method "sshx")
-
 ;; split horizontally (left/right) by default
 (setq split-height-threshold nil) ;; do not split windows vertically (up/down)
 (setq split-width-threshold 150)  ;; do not split windows <150 columns wide
