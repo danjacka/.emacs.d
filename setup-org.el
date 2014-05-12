@@ -14,6 +14,16 @@
 ;; A watched pot never boils
 (setq org-clock-clocked-in-display nil)
 
+;; Babel runs source code blocks within an org file
+;; (C-c C-c with point in the block)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((dot . t) ; GraphViz DOT
+   ))
+
+; Do not prompt to confirm Babel evaluation
+(setq org-confirm-babel-evaluate nil)
+
 ;; Export options
 (setq org-export-with-section-numbers nil)
 (setq org-html-include-timestamps nil)
