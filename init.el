@@ -59,6 +59,7 @@
      multiple-cursors
      nginx-mode
      org
+     paredit
      projectile
      protobuf-mode
      pydoc-info
@@ -82,6 +83,7 @@
 (require 'setup-erc)
 (require 'setup-org)
 (require 'setup-eshell)
+(require 'setup-paredit)
 
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
