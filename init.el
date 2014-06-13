@@ -83,6 +83,9 @@
 (require 'setup-org)
 (require 'setup-eshell)
 
+;; Font lock dash.el
+(eval-after-load "dash" '(dash-enable-font-lock))
+
 ;; Language-specific setup files
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
