@@ -1,3 +1,6 @@
+; enable loading new directory in the existing dired buffer
+(put 'dired-find-alternate-file 'disabled nil)
+
 (add-hook
  'dired-mode-hook
  '(lambda ()
