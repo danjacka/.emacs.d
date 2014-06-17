@@ -78,6 +78,7 @@
 (require 'sane-defaults)
 
 ;; Setup extensions
+(eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'magit '(require 'setup-magit))
 (require 'setup-erc)
