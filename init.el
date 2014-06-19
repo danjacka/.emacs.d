@@ -42,12 +42,10 @@
      anzu
      cider
      clojure-mode
-     csv-mode
      dash
      diminish
      discover
      eproject
-     erc-hl-nicks
      expand-region
      flymake-python-pyflakes
      inf-ruby
@@ -61,7 +59,6 @@
      org
      paredit
      projectile
-     protobuf-mode
      pydoc-info
      rainbow-mode
      smex
