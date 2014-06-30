@@ -42,6 +42,7 @@
      anzu
      cider
      clojure-mode
+     csharp-mode
      dash
      diminish
      discover
