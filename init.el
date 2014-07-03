@@ -119,6 +119,7 @@
 (require 'appearance)
 (require 'miscellaneous)
 (when (equal system-type 'gnu/linux) (require 'linux))
+(when (equal system-type 'windows-nt) (require 'windows))
 
 ;; Run at full power
 (put 'downcase-region 'disabled nil)
