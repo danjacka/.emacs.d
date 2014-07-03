@@ -121,6 +121,11 @@
 (when (equal system-type 'gnu/linux) (require 'linux))
 (when (equal system-type 'windows-nt) (require 'windows))
 
+;; Emacs server
+(require 'server)
+(unless (server-running-p)
+  (server-start))
+
 ;; Run at full power
 (put 'downcase-region 'disabled nil)
 (put 'narrow-to-region 'disabled nil)
