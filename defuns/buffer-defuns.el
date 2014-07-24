@@ -100,10 +100,12 @@ point reaches the beginning or end of the buffer, stop there."
   (interactive)
   (delete-indentation 1))
 
-(defun json-format-buffer ()
-  "Simple JSON pretty printer. Via http://irreal.org/blog/?p=354"
+(defun xml-format-buffer ()
+  "Simple XML pretty printer. Via http://sinewalker.wordpress.com/2008/06/26/pretty-printing-xml-with-emacs-nxml-mode/"
   (interactive)
   (save-excursion
-    (shell-command-on-region (point-min) (point-max)
-                             "python -m json.tool" (buffer-name) t)
-    (whitespace-cleanup)))
+    (nxml-mode)
+    (goto-char (point-min))
+    (while (search-forward-regexp "\>[ \\t]*\<" nil t)
+      (backward-char) (insert "\n"))
+    (indent-region (point-min) (point-max))))

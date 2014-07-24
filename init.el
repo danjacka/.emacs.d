@@ -49,8 +49,10 @@
      eproject
      expand-region
      flymake-python-pyflakes
+     git-timemachine
      inf-ruby
      js2-mode
+     json-reformat
      magit
      magit-svn
      markdown-mode
