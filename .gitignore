@@ -5,6 +5,7 @@
 /.mc-lists.el
 /.places
 /projectile-bookmarks.eld
+/projectile.cache
 /server
 /session.*
 /tramp
