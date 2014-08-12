@@ -64,9 +64,11 @@
      projectile
      pydoc-info
      rainbow-mode
+     rbenv
      smex
      zenburn-theme
-     virtualenvwrapper)))
+     virtualenvwrapper
+     yari)))
 
 (condition-case nil
     (init--install-packages)
@@ -91,7 +93,7 @@
 
 ;; Language-specific setup files
 (eval-after-load 'python '(require 'setup-python))
-(eval-after-load 'ruby-mode '(require 'setup-ruby-mode))
+(eval-after-load 'ruby-mode '(require 'setup-ruby))
 
 ;; Use project files
 (require 'setup-eproject)

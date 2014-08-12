@@ -4,4 +4,8 @@
   (interactive)
   (run-ruby "bundle console"))
 
-(provide 'setup-ruby-mode)
+;; Recognise rbenv Rubies
+(setq rbenv-show-active-ruby-in-modeline nil)
+(global-rbenv-mode)
+
+(provide 'setup-ruby)
