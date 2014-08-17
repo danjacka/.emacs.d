@@ -25,5 +25,7 @@
 (require 'diminish)
 (eval-after-load "anzu" '(diminish 'anzu-mode))
 (eval-after-load "hi-lock" '(diminish 'hi-lock-mode))
+(eval-after-load "magit" '(diminish 'magit-auto-revert-mode))
+
 
 (provide 'appearance)
