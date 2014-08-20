@@ -94,6 +94,7 @@
 ;; Language-specific setup files
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'ruby-mode '(require 'setup-ruby))
+(eval-after-load 'csharp-mode '(require 'setup-csharp))
 
 ;; Use project files
 (require 'setup-eproject)
