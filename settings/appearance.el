@@ -19,7 +19,9 @@
 (defun urchin-mode ()
   (interactive)
   (setq cursor-type nil)
-  (text-scale-increase 16))
+  (text-scale-increase 16)
+  (put 'erase-buffer 'disabled nil)
+  (local-set-key (kbd "ESC") 'erase-buffer))
 
 ;; Unclutter the modeline
 (require 'diminish)
