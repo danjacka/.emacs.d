@@ -1,10 +1,11 @@
 ;; .emacs.d structure based on https://github.com/magnars/.emacs.d
 
 ;; Set path to dependencies
+(setq settings-dir (expand-file-name "settings" user-emacs-directory))
 (setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
 
 ;; Set up load path
-(add-to-list 'load-path user-emacs-directory)
+(add-to-list 'load-path settings-dir)
 (add-to-list 'load-path site-lisp-dir)
 
 ;; Add external projects to load path
