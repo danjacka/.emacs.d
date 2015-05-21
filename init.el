@@ -47,7 +47,6 @@
      dash
      diminish
      discover
-     eproject
      expand-region
      flymake-python-pyflakes
      git-timemachine
@@ -98,8 +97,6 @@
 (eval-after-load 'csharp-mode '(require 'setup-csharp))
 
 ;; Use project files
-(require 'setup-eproject)
-(require 'eproject-plone)
 (require 'setup-projectile)
 
 ;; Map files to modes
