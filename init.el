@@ -50,6 +50,7 @@
      expand-region
      flymake-python-pyflakes
      git-timemachine
+     inf-clojure
      inf-ruby
      js2-mode
      json-reformat
@@ -95,6 +96,7 @@
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'ruby-mode '(require 'setup-ruby))
 (eval-after-load 'csharp-mode '(require 'setup-csharp))
+(eval-after-load 'clojure-mode '(require 'setup-clojure))
 
 ;; Use project files
 (require 'setup-projectile)
