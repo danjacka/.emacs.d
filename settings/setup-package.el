@@ -1,8 +1,17 @@
 (require 'package)
 
-;; Add melpa to package repos
+;; Add MELPAs to package repos
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/") t)
+
+;;package.el installs the highest available version number from all archives,
+;;unless the package is pinned to a particular archive (Emacs 24.4+)
+(when (boundp 'package-pinned-packages)
+  (setq package-pinned-packages
+        '((cider        . "melpa-stable")
+          (clojure-mode . "melpa-stable"))))
 
 (package-initialize)
 
