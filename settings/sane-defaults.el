@@ -87,4 +87,7 @@
 ;; Normal tab completion in Eshell
 (setq eshell-cmpl-cycle-completions nil)
 
+;; https://raw.githubusercontent.com/magit/magit/next/Documentation/RelNotes/1.4.0.txt
+(setq magit-last-seen-setup-instructions "1.4.0")
+
 (provide 'sane-defaults)
