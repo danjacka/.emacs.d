@@ -13,9 +13,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; You know, like Readline.
-(global-set-key (kbd "C-M-h") 'backward-kill-word)
-
 ;; ace-jump-mode
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
