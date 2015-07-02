@@ -55,7 +55,6 @@
      js2-mode
      json-reformat
      magit
-     magit-svn
      markdown-mode
      monokai-theme
      multiple-cursors

@@ -1,5 +1,3 @@
-(require 'magit-svn)
-
 ;; Load git configurations
 ;; For instance, to run magit-svn-mode in a project, do:
 ;;
