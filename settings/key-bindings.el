@@ -37,11 +37,13 @@
 (global-set-key (kbd "M-?") 'etags-select-find-tag-at-point)
 (global-set-key (kbd "M-.") 'etags-select-find-tag)
 
-;; remap C-a to `smarter-move-beginning-of-line'
+;; Remap C-a to `smarter-move-beginning-of-line'
 (global-set-key [remap move-beginning-of-line] 'smarter-move-beginning-of-line)
 
 ;; top-join-line (C-^ is regular join-line)
 (global-set-key (kbd "M-^") 'top-join-line)
 
+;; Jump to definitions with imenu
+(global-set-key (kbd "M-i") 'imenu)
 
 (provide 'key-bindings)
