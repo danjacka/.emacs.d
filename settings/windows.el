@@ -7,6 +7,7 @@
 (setq auto-coding-functions nil)
 
 ;; Ignore node.js module directories when searching (because paths are often too long)
+(require 'grep)
 (setq grep-find-ignored-directories (add-to-list 'grep-find-ignored-directories "node_modules"))
 
 (provide 'windows)
