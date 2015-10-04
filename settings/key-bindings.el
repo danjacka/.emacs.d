@@ -29,9 +29,6 @@
 (global-set-key (kbd "C-x m") 'magit-status)
 (autoload 'magit-status "magit")
 
-;; Python shortcuts
-(global-set-key (kbd "<f5>") 'python-shell-repeat-python)
-
 ;; etags-select
 (require 'etags-select)
 (global-set-key (kbd "M-?") 'etags-select-find-tag-at-point)

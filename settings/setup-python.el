@@ -1,5 +1,4 @@
-;;; mr.igor remembers Python imports
-
+;; mr.igor remembers Python imports
 (defun igor ()
   "Run the current buffer through mr.igor."
   (interactive)
@@ -21,57 +20,18 @@
           (message "igor: added %d imports" (- lines-after lines-before))))
       (delete-file tempfile))))
 
-
-;;; Python process control
-
-(defun python-kill-python ()
-  (interactive)
-  (save-excursion
-    (when (get-buffer "*Python*")
-      (set-buffer "*Python*")
-      (when (comint-check-proc "*Python*")
-        (comint-send-eof)
-        (sleep-for 0.2))
-      (when (comint-check-proc "*Python*")
-        (comint-interrupt-subjob)
-        (comint-send-eof)
-        (sleep-for 1))
-      (when (comint-check-proc "*Python*")
-        (comint-kill-subjob)
-        (sleep-for 0.5))
-      (when (comint-check-proc "*Python*")
-        (error "Could not kill the Python interpreter")))))
-
-(defvar python-run-python-last-cmd nil
-  "The command argument that run-python was last invoked with.")
-
-(defun python-shell-repeat-python ()
-  "Repeat the last shell command that started Python"
-  (interactive)
-  (python-kill-python)
-  (funcall #'run-python python-run-python-last-cmd nil nil))
-
 (defun python-shell-interactive-interpreter ()
   "Start an interactive interpreter from pdb"
   (interactive)
   (insert "!import code; code.interact(local=vars())")
   (comint-send-input))
 
-
-;;; Skeletons
-
 (python-skeleton-define pdb "Insert PDB breakpoint."
   nil
   \n "import pdb; pdb.set_trace()")
 
-
-;;; Keybindings
-
 (define-key python-mode-map (kbd "C-c C-i") 'igor)
 (define-key python-mode-map (kbd "C-c C-t p") 'python-skeleton-pdb)
-
-
-;;; Mode hooks
 
 (add-hook
  'python-mode-hook
@@ -80,11 +40,5 @@
     (flymake-python-pyflakes-load)
     (setq fill-column 78)
     (subword-mode 1)))
-
-(add-hook
- 'inferior-python-mode-hook
- '(lambda ()
-    (setq python-run-python-last-cmd cmd)))
-
 
 (provide 'setup-python)
