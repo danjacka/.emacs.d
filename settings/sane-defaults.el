@@ -84,6 +84,9 @@
 (setq ediff-split-window-function 'split-window-horizontally)
 (setq ediff-window-setup-function 'ediff-setup-windows-plain)
 
+;; No electric indent
+(setq electric-indent-mode nil)
+
 ;; Normal tab completion in Eshell
 (setq eshell-cmpl-cycle-completions nil)
 
