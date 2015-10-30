@@ -12,4 +12,7 @@
 ;; Ignore downloaded packages
 (add-to-list 'grep-find-ignored-directories "packages")
 
+;; Treat LINQPad files as C#
+(add-to-list 'auto-mode-alist '("\\.linq$" . csharp-mode))
+
 (provide 'windows)
