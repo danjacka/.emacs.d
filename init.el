@@ -61,6 +61,7 @@
      nginx-mode
      org
      paredit
+     powershell
      projectile
      pydoc-info
      rainbow-mode
