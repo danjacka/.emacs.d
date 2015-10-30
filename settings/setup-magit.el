@@ -27,4 +27,9 @@
 
      (define-key vc-annotate-mode-map (kbd "q") 'vc-annotate-quit)))
 
+;; additional popup options
+
+(magit-define-popup-switch 'magit-log-popup
+ ?m "Omit merge commits" "--no-merges")
+
 (provide 'setup-magit)
