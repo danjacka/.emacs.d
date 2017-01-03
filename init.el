@@ -39,8 +39,7 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(ace-jump-mode
-     anzu
+   '(anzu
      cider
      clojure-mode
      csharp-mode
@@ -48,28 +47,19 @@
      diminish
      discover
      expand-region
-     flymake-python-pyflakes
      git-timemachine
      inf-clojure
-     inf-ruby
-     js2-mode
      json-reformat
      magit
      markdown-mode
-     monokai-theme
      multiple-cursors
-     nginx-mode
      org
      paredit
      powershell
-     projectile
-     pydoc-info
      rainbow-mode
-     rbenv
      smex
      zenburn-theme
-     virtualenvwrapper
-     yari)))
+     virtualenvwrapper)))
 
 (condition-case nil
     (init--install-packages)
@@ -94,12 +84,8 @@
 
 ;; Language-specific setup files
 (eval-after-load 'python '(require 'setup-python))
-(eval-after-load 'ruby-mode '(require 'setup-ruby))
 (eval-after-load 'csharp-mode '(require 'setup-csharp))
 (eval-after-load 'clojure-mode '(require 'setup-clojure))
-
-;; Use project files
-(require 'setup-projectile)
 
 ;; Map files to modes
 (require 'mode-mappings)

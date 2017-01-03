@@ -13,9 +13,6 @@
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; ace-jump-mode
-(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
-
 ;; Find definitions easily
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-k") 'find-function-on-key)

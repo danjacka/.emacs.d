@@ -37,7 +37,6 @@
  'python-mode-hook
  '(lambda ()
     (highlight-lines-matching-regexp "^[ ]*import pdb; pdb.set_trace()")
-    (flymake-python-pyflakes-load)
     (setq fill-column 78)
     (subword-mode 1)))
 
