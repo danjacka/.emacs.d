@@ -7,4 +7,7 @@
 ;; Rainbow mode for RGB values in CSS
 (add-hook 'css-mode-hook 'rainbow-mode)
 
+;; Identation-based folding for JavaScript and JSON
+(add-hook 'js-mode-hook 'yafolding-mode)
+
 (provide 'mode-mappings)

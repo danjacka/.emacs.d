@@ -58,8 +58,9 @@
      powershell
      rainbow-mode
      smex
-     zenburn-theme
-     virtualenvwrapper)))
+     virtualenvwrapper
+     yafolding
+     zenburn-theme)))
 
 (condition-case nil
     (init--install-packages)
