@@ -88,6 +88,7 @@
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'csharp-mode '(require 'setup-csharp))
 (eval-after-load 'clojure-mode '(require 'setup-clojure))
+(eval-after-load 'js '(require 'setup-javascript))
 
 ;; Map files to modes
 (require 'mode-mappings)
