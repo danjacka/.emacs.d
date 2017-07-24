@@ -57,6 +57,7 @@
      paredit
      powershell
      rainbow-mode
+     restclient
      smex
      virtualenvwrapper
      yafolding
