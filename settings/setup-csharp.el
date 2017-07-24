@@ -5,6 +5,7 @@
 (add-hook 'csharp-mode-hook
           (lambda ()
             (set (make-local-variable 'c-basic-offset) 4)
+            (set (make-local-variable 'fill-column) 100)
             (c-set-offset 'substatement-open 0)
             (subword-mode 1)))
 
