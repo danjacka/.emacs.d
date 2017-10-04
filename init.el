@@ -60,6 +60,7 @@
      restclient
      smex
      virtualenvwrapper
+     spacemacs-theme
      yafolding
      zenburn-theme)))
 

@@ -4,7 +4,8 @@
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; Load themes
-(load-theme 'zenburn t)
+(setq-default spacemacs-theme-org-height nil)
+(load-theme 'spacemacs-dark t)
 
 ;; Highlight current line
 (global-hl-line-mode 1)
