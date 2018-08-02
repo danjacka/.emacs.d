@@ -7,6 +7,12 @@
 (setq-default spacemacs-theme-org-height nil)
 (load-theme 'spacemacs-dark t)
 
+;; Don't beep. Just blink the modeline on errors.
+(setq visible-bell nil)
+(setq ring-bell-function (lambda ()
+                           (invert-face 'mode-line)
+(run-with-timer 0.05 nil 'invert-face 'mode-line)))
+
 ;; Highlight current line
 (global-hl-line-mode 1)
 
