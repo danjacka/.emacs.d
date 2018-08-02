@@ -1,5 +1,7 @@
 ;; .emacs.d structure based on https://github.com/magnars/.emacs.d
 
+(package-initialize)
+
 ;; Set path to dependencies
 (setq settings-dir (expand-file-name "settings" user-emacs-directory))
 (setq site-lisp-dir (expand-file-name "site-lisp" user-emacs-directory))
@@ -50,6 +52,7 @@
      git-timemachine
      inf-clojure
      json-reformat
+     lua-mode
      magit
      markdown-mode
      multiple-cursors
@@ -59,9 +62,10 @@
      rainbow-mode
      restclient
      smex
-     virtualenvwrapper
      spacemacs-theme
+     virtualenvwrapper
      yafolding
+     yaml-mode
      zenburn-theme)))
 
 (condition-case nil
