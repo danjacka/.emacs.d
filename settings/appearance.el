@@ -16,14 +16,6 @@
 ;; Don't defer screen updates when performing operations
 (setq redisplay-dont-pause t)
 
-;; Big letters please urchins
-(defun urchin-mode ()
-  (interactive)
-  (setq cursor-type 'bar)
-  (text-scale-increase 11)
-  (put 'erase-buffer 'disabled nil)
-  (local-set-key (kbd "ESC") 'erase-buffer))
-
 ;; Unclutter the modeline
 (require 'diminish)
 (eval-after-load "anzu" '(diminish 'anzu-mode))
