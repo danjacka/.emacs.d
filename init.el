@@ -49,6 +49,7 @@
      diminish
      discover
      expand-region
+     fennel-mode
      git-timemachine
      inf-clojure
      json-reformat
