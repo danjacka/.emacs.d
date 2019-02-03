@@ -27,4 +27,7 @@
 (eval-after-load "anzu" '(diminish 'anzu-mode))
 (eval-after-load "hi-lock" '(diminish 'hi-lock-mode))
 
+;; Set font height
+(set-face-attribute 'default nil :height 140)
+
 (provide 'appearance)
