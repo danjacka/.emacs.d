@@ -19,6 +19,7 @@
 (org-babel-do-load-languages
  'org-babel-load-languages
  '((dot . t) ; GraphViz DOT
+   (ledger . t ) ; Ledger
    ))
 
 ; Do not prompt to confirm Babel evaluation
