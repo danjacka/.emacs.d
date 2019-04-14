@@ -26,11 +26,6 @@
 (global-set-key (kbd "C-x m") 'magit-status)
 (autoload 'magit-status "magit")
 
-;; etags-select
-(require 'etags-select)
-(global-set-key (kbd "M-?") 'etags-select-find-tag-at-point)
-(global-set-key (kbd "M-.") 'etags-select-find-tag)
-
 ;; Remap C-a to `smarter-move-beginning-of-line'
 (global-set-key [remap move-beginning-of-line] 'smarter-move-beginning-of-line)
 

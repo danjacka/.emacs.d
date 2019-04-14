@@ -1,6 +1,6 @@
 ;; .emacs.d structure based on https://github.com/magnars/.emacs.d
-
 (package-initialize)
+(require 'better-defaults)
 
 ;; Set path to dependencies
 (setq settings-dir (expand-file-name "settings" user-emacs-directory))
@@ -10,30 +10,27 @@
 (add-to-list 'load-path settings-dir)
 (add-to-list 'load-path site-lisp-dir)
 
+;; Keep emacs Custom-settings in separate file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+(load custom-file)
+
 ;; Add external projects to load path
 (dolist (project (directory-files site-lisp-dir t "\\w+"))
   (when (file-directory-p project)
     (add-to-list 'load-path project)))
 
-;; Keep emacs Custom-settings in separate file
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(load custom-file)
+;; Write all autosave files in the tmp dir
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
 
-;; No backup files
-(setq make-backup-files nil)
+;; Don't write lock-files, I'm the only one here
+(setq create-lockfiles nil)
+
+;; Make backups of files, even when they're in version control
+(setq vc-make-backup-files t)
 
 ;; Save point position between sessions
-(require 'saveplace)
-(setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" user-emacs-directory))
-
-;; Don't expire cached passwords
-(setq password-cache-expiry nil)
-
-;; split horizontally (left/right) by default
-(setq split-height-threshold nil) ;; do not split windows vertically (up/down)
-(setq split-width-threshold 150)  ;; do not split windows <150 columns wide
-                                  ;; => maintain 2 side-by-side windows
 
 ;; Setup packages
 (require 'setup-package)
@@ -41,16 +38,19 @@
 ;; Install extensions if they're missing
 (defun init--install-packages ()
   (packages-install
-   '(anzu
+   '(
+     anzu
+     better-defaults
      cider
      clojure-mode
      csharp-mode
      dash
      diminish
-     discover
+     dockerfile-mode
      expand-region
      fennel-mode
      git-timemachine
+     groovy-mode
      inf-clojure
      json-reformat
      lua-mode
@@ -82,9 +82,7 @@
 (eval-after-load 'dired '(require 'setup-dired))
 (eval-after-load 'ido '(require 'setup-ido))
 (eval-after-load 'magit '(require 'setup-magit))
-(require 'setup-erc)
 (require 'setup-org)
-(require 'setup-eshell)
 (require 'setup-paredit)
 
 ;; Font lock dash.el
@@ -134,7 +132,3 @@
 (setq expat-settings-dir "~/.emacs-expat/")
 (when (file-exists-p expat-settings-dir)
   (mapc 'load (directory-files expat-settings-dir t "^[^#].*el$")))
-
-;; Experimental discover mode
-;; http://www.masteringemacs.org/articles/2013/12/21/discoverel-discover-emacs-context-menus/
-(global-discover-mode 1)

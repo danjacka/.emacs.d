@@ -1,17 +1,14 @@
 ;; full screen magit-status
-
 (defadvice magit-status (around magit-fullscreen activate)
   ad-do-it
   (delete-other-windows))
 
 ;; don't prompt me
-
-(set-default 'magit-unstage-all-confirm nil)
-(set-default 'magit-stage-all-confirm nil)
 (set-default 'magit-revert-buffers 'silent)
+(set-default 'magit-no-confirm '(stage-all-changes
+                                 unstage-all-changes))
 
 ;; full screen vc-annotate
-
 (defun vc-annotate-quit ()
   "Restores the previous window configuration and kills the vc-annotate buffer"
   (interactive)
@@ -26,10 +23,5 @@
        (delete-other-windows))
 
      (define-key vc-annotate-mode-map (kbd "q") 'vc-annotate-quit)))
-
-;; additional popup options
-
-(magit-define-popup-switch 'magit-log-popup
- ?m "Omit merge commits" "--no-merges")
 
 (provide 'setup-magit)

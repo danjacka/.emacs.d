@@ -3,12 +3,16 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
+;; split horizontally (left/right) by default
+(setq split-height-threshold nil) ;; do not split windows vertically (up/down)
+(setq split-width-threshold 150)  ;; do not split windows <150 columns wide
+                                  ;; => maintain 2 side-by-side windows
+
 ;; Load themes
 (setq-default spacemacs-theme-org-height nil)
 (load-theme 'spacemacs-dark t)
 
-;; Don't beep. Just blink the modeline on errors.
-(setq visible-bell nil)
+;; Blink the modeline on errors.
 (setq ring-bell-function (lambda ()
                            (invert-face 'mode-line)
 (run-with-timer 0.05 nil 'invert-face 'mode-line)))
