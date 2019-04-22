@@ -1,19 +1,23 @@
+;; No splash screen
+(setq inhibit-startup-screen t)
+
+;; No *scratch* message
+(setq initial-scratch-message nil)
+
 ;; Allow pasting selection outside of Emacs
 (setq x-select-enable-clipboard t)
 
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
-;; Also auto refresh dired
+;; Also auto refresh dired, but be quiet about it
 (setq global-auto-revert-non-file-buffers t)
+(setq auto-revert-verbose nil)
 
 ;; Show keystrokes in progress
 (setq echo-keystrokes 0.1)
 
-;; Show active region
-(setq transient-mark-mode t)
-
-;; Don't move files to trash when deleting
+;; Delete files outright
 (setq delete-by-moving-to-trash nil)
 
 ;; Real emacs knights don't use shift to mark things
@@ -25,30 +29,24 @@
 ;; Enable syntax highlighting for older Emacsen that have it off
 (global-font-lock-mode t)
 
-;; <tab> inserts spaces, not tabs and spaces
-(setq-default indent-tabs-mode nil)
-
-;; No splash screen
-(setq inhibit-startup-screen t)
-
-;; No *scratch* message
-(setq initial-scratch-message nil)
-
 ;; Answer questions with y/n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-;; Sentences end with a single space
-(setq sentence-end-double-space nil)
+;; UTF-8 please
+(setq locale-coding-system 'utf-8) ; pretty
+(set-terminal-coding-system 'utf-8) ; pretty
+(set-keyboard-coding-system 'utf-8) ; pretty
+(set-selection-coding-system 'utf-8) ; please
+(prefer-coding-system 'utf-8) ; with sugar on top
 
-;; UTF-8 everywhere
-(prefer-coding-system       'utf-8)
-(set-default-coding-systems 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(setq default-buffer-file-coding-system 'utf-8)
+;; Show active region
+(setq transient-mark-mode t)
+(make-variable-buffer-local 'transient-mark-mode)
+(put 'transient-mark-mode 'permanent-local t)
+(setq-default transient-mark-mode t)
 
 ;; Remove text in active region if inserting text
-(pending-delete-mode t)
+(delete-selection-mode t)
 
 ;; Always display line and column numbers
 (setq line-number-mode t)
@@ -60,6 +58,9 @@
 ;; Save a list of recent files visited.
 (recentf-mode 1)
 (setq recentf-max-saved-items 100) ;; just 20 is too recent
+
+;; <tab> inserts spaces, not tabs and spaces
+(setq-default indent-tabs-mode nil)
 
 ;; Show me empty lines after buffer end
 (set-default 'indicate-empty-lines t)
@@ -73,11 +74,19 @@
 ;; Don't be so stingy on the memory, we have lots now. It's the distant future.
 (setq gc-cons-threshold 20000000)
 
-;; Change how buffer names are made unique
-(require 'uniquify)
-(setq
-  uniquify-buffer-name-style 'post-forward
-  uniquify-separator ":")
+;; org-mode: Don't ruin S-arrow to switch windows please (use M-+ and M-- instead to toggle)
+(setq org-replace-disputed-keys t)
+
+;; Fontify org-mode code blocks
+(setq org-src-fontify-natively t)
+
+;; Represent undo-history as an actual tree (visualize with C-x u)
+(setq undo-tree-mode-lighter "")
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+;; Sentences end with a single space
+(setq sentence-end-double-space nil)
 
 ;; A saner ediff
 (setq ediff-diff-options "-w")
@@ -89,8 +98,5 @@
 
 ;; Normal tab completion in Eshell
 (setq eshell-cmpl-cycle-completions nil)
-
-;; https://raw.githubusercontent.com/magit/magit/next/Documentation/RelNotes/1.4.0.txt
-(setq magit-last-seen-setup-instructions "1.4.0")
 
 (provide 'sane-defaults)

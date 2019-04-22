@@ -1,8 +1,3 @@
-;; Turn off unnecessary UI elements
-(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
-(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
-(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
-
 ;; split horizontally (left/right) by default
 (setq split-height-threshold nil) ;; do not split windows vertically (up/down)
 (setq split-width-threshold 150)  ;; do not split windows <150 columns wide

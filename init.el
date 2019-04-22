@@ -1,6 +1,5 @@
 ;; .emacs.d structure based on https://github.com/magnars/.emacs.d
 (package-initialize)
-(require 'better-defaults)
 
 ;; Set path to dependencies
 (setq settings-dir (expand-file-name "settings" user-emacs-directory))
@@ -28,9 +27,6 @@
 
 ;; Make backups of files, even when they're in version control
 (setq vc-make-backup-files t)
-
-;; Save point position between sessions
-(setq save-place-file (expand-file-name ".places" user-emacs-directory))
 
 ;; Setup packages
 (require 'setup-package)
@@ -64,6 +60,7 @@
      restclient
      smex
      spacemacs-theme
+     undo-tree
      virtualenvwrapper
      yafolding
      yaml-mode
@@ -76,6 +73,7 @@
    (init--install-packages)))
 
 ;; Let's start with a smattering of sanity
+(require 'better-defaults) ; https://github.com/technomancy/better-defaults
 (require 'sane-defaults)
 
 ;; Setup extensions
