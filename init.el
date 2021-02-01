@@ -1,5 +1,4 @@
 ;; .emacs.d structure based on https://github.com/magnars/.emacs.d
-(package-initialize)
 
 ;; Set path to dependencies
 (setq settings-dir (expand-file-name "settings" user-emacs-directory))
@@ -49,6 +48,7 @@
      groovy-mode
      inf-clojure
      json-reformat
+     ledger-mode
      lua-mode
      magit
      markdown-mode
@@ -90,6 +90,7 @@
 (eval-after-load 'python '(require 'setup-python))
 (eval-after-load 'csharp-mode '(require 'setup-csharp))
 (eval-after-load 'clojure-mode '(require 'setup-clojure))
+(eval-after-load 'css-mode '(require 'setup-css))
 (eval-after-load 'js '(require 'setup-javascript))
 
 ;; Map files to modes

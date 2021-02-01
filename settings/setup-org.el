@@ -7,6 +7,7 @@
      (local-unset-key '[S-right])
      (local-unset-key '[S-up])))
 (global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cc" 'org-capture)
 
 ;; Date format for Calendar/Diary
 (setq-default calendar-date-style 'european)
@@ -18,9 +19,11 @@
 ;; (C-c C-c with point in the block)
 (org-babel-do-load-languages
  'org-babel-load-languages
- '((dot . t) ; GraphViz DOT
-   (ledger . t ) ; Ledger
-   ))
+ (append org-babel-load-languages
+         '((ditaa . t)
+           (dot . t)
+           (ledger . t )
+           )))
 
 ; Do not prompt to confirm Babel evaluation
 (setq org-confirm-babel-evaluate nil)
@@ -29,5 +32,9 @@
 (setq org-export-with-section-numbers nil)
 (setq org-html-include-timestamps nil)
 
+;; Custom agendas
+(setq org-agenda-custom-commands '(("H" "Office and Home Lists"
+                                    ((agenda)
+                                     (tags-todo "HUBBUB")))))
 (provide 'setup-org)
 
