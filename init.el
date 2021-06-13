@@ -54,6 +54,7 @@
      markdown-mode
      multiple-cursors
      org
+     org-roam
      paredit
      powershell
      rainbow-mode

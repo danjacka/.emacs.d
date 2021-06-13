@@ -32,9 +32,5 @@
 (setq org-export-with-section-numbers nil)
 (setq org-html-include-timestamps nil)
 
-;; Custom agendas
-(setq org-agenda-custom-commands '(("H" "Office and Home Lists"
-                                    ((agenda)
-                                     (tags-todo "HUBBUB")))))
 (provide 'setup-org)
 
