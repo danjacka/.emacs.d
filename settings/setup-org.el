@@ -29,7 +29,6 @@
 (setq org-confirm-babel-evaluate nil)
 
 ;; Export options
-(setq org-export-with-section-numbers nil)
 (setq org-html-include-timestamps nil)
 
 (provide 'setup-org)
