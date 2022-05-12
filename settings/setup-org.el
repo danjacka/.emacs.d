@@ -21,9 +21,7 @@
  'org-babel-load-languages
  (append org-babel-load-languages
          '((ditaa . t)
-           (dot . t)
-           (ledger . t )
-           )))
+           (dot . t))))
 
 ; Do not prompt to confirm Babel evaluation
 (setq org-confirm-babel-evaluate nil)
