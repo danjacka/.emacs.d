@@ -37,10 +37,12 @@
      anzu
      better-defaults
      cider
+     circe
      clojure-mode
      csharp-mode
      dash
      diminish
+     docker-tramp
      dockerfile-mode
      expand-region
      fennel-mode
@@ -61,6 +63,7 @@
      restclient
      smex
      spacemacs-theme
+     typescript-mode
      undo-tree
      virtualenvwrapper
      yafolding
