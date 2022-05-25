@@ -84,6 +84,7 @@
 (setq undo-tree-mode-lighter "")
 (require 'undo-tree)
 (global-undo-tree-mode)
+(setq undo-tree-auto-save-history nil)
 
 ;; Sentences end with a single space
 (setq sentence-end-double-space nil)
