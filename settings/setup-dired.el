@@ -3,7 +3,7 @@
 
 (add-hook
  'dired-mode-hook
- '(lambda ()
+ #'(lambda ()
     ; change buffer name to start with '*dired*'
     (let ((name (buffer-name)))
       (if (not (string-match  "^\\*dired\\*\\ " name))

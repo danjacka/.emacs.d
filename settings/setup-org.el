@@ -1,5 +1,5 @@
 (add-hook 'org-mode-hook
-  '(lambda ()
+  #'(lambda ()
      (turn-on-font-lock) ; not needed when global-font-lock-mode is on
      ; Disregard Org-mode's Shift+arrows keybindings
      (local-unset-key '[S-down])

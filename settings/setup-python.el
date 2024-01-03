@@ -35,7 +35,7 @@
 
 (add-hook
  'python-mode-hook
- '(lambda ()
+ #'(lambda ()
     (highlight-lines-matching-regexp "^[ ]*import pdb; pdb.set_trace()")
     (setq fill-column 78)
     (subword-mode 1)))
