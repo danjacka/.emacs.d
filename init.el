@@ -39,13 +39,14 @@
      cider
      circe
      clojure-mode
-     csharp-mode
+     clojure-mode-extra-font-locking
      dash
      diminish
-     docker-tramp
      dockerfile-mode
      expand-region
      fennel-mode
+     flycheck
+     flycheck-joker
      git-timemachine
      groovy-mode
      inf-clojure
@@ -87,6 +88,9 @@
 (require 'setup-org)
 (require 'setup-paredit)
 
+;; Enable flycheck linting
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;; Font lock dash.el
 (eval-after-load "dash" '(dash-enable-font-lock))
 
@@ -96,6 +100,9 @@
 (eval-after-load 'clojure-mode '(require 'setup-clojure))
 (eval-after-load 'css-mode '(require 'setup-css))
 (eval-after-load 'js '(require 'setup-javascript))
+
+;; Load stuff on demand
+(eval-after-load 'flycheck '(require 'setup-flycheck))
 
 ;; Map files to modes
 (require 'mode-mappings)

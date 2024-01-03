@@ -1,8 +1,11 @@
-;; https://github.com/clojure/clojurescript/wiki/Emacs-%26-Inferior-Clojure-Interaction-Mode
-(defun cljs-node-repl ()
-  (interactive)
-  (run-clojure "lein trampoline run -m clojure.main repl.clj"))
 
+(require 'clojure-mode)
+(require 'clojure-mode-extra-font-locking)
+
+;; Lint with joker https://aur.archlinux.org/packages/joker-bin
+(require 'flycheck-joker)
+
+;; Enable eldoc in Clojure buffers
 (add-hook 'cider-mode-hook #'eldoc-mode)
 
 (provide 'setup-clojure)
