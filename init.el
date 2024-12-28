@@ -41,6 +41,7 @@
      clojure-mode
      clojure-mode-extra-font-locking
      dash
+     deadgrep
      diminish
      dockerfile-mode
      expand-region
@@ -51,6 +52,7 @@
      groovy-mode
      inf-clojure
      json-reformat
+     kaocha-runner
      ledger-mode
      lua-mode
      magit
@@ -59,6 +61,7 @@
      org
      org-roam
      paredit
+     pikchr-mode
      powershell
      rainbow-mode
      restclient
@@ -67,6 +70,7 @@
      typescript-mode
      undo-tree
      virtualenvwrapper
+     which-key
      yafolding
      yaml-mode
      zenburn-theme)))

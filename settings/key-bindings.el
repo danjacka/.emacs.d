@@ -35,4 +35,8 @@
 ;; Jump to definitions with imenu
 (global-set-key (kbd "M-i") 'imenu)
 
+;; No keybindings for suspend-frame
+(global-unset-key (kbd "C-z"))
+(global-unset-key (kbd "C-x C-z"))
+
 (provide 'key-bindings)

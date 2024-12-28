@@ -1,7 +1,9 @@
 ;; split horizontally (left/right) by default
 (setq split-height-threshold nil) ;; do not split windows vertically (up/down)
-(setq split-width-threshold 150)  ;; do not split windows <150 columns wide
-                                  ;; => maintain 2 side-by-side windows
+(let* ((screen-width (display-pixel-width))
+       (ncol (if (> screen-width 3000) 200 150)))
+  (setq split-width-threshold ncol)) ;; do not split windows less than ncol columns wide
+                                    ;; => maintain 2 side-by-side windows
 
 ;; Load themes
 (setq-default spacemacs-theme-org-height nil)

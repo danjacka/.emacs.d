@@ -29,5 +29,8 @@
 ;; Export options
 (setq org-html-include-timestamps nil)
 
+;; Keep C-' for expand-region
+(org-defkey org-mode-map (kbd "C-'") nil)
+
 (provide 'setup-org)
 

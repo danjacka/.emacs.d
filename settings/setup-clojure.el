@@ -8,4 +8,7 @@
 ;; Enable eldoc in Clojure buffers
 (add-hook 'cider-mode-hook #'eldoc-mode)
 
+;; Ignore comment wrappers for defun-level commands
+(setq clojure-toplevel-inside-comment-form t)
+
 (provide 'setup-clojure)
