@@ -5,7 +5,6 @@
 ;; from a list of candidates.
 
 (use-package consult
-  :if my-try-new-things
   :bind (("C-x f" . consult-recent-file)
          ("C-x C-i" . consult-imenu)
          ("C-x M-i" . consult-imenu-multi)

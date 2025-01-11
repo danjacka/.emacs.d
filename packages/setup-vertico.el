@@ -4,18 +4,15 @@
 ;; default completion system.
 
 (use-package vertico
-  :if my-try-new-things
   :init
   (vertico-mode))
 
 ;; Persist history over Emacs restarts. Vertico sorts by history position.
 (use-package savehist
-  :if my-try-new-things
   :init
   (savehist-mode))
 
 (use-package orderless
-  :if my-try-new-things
   :custom
   ;; Configure a custom style dispatcher (see the Consult wiki)
   ;; (orderless-style-dispatchers '(+orderless-consult-dispatch orderless-affix-dispatch))

@@ -28,8 +28,6 @@
 (require 'buffers)
 (require 'extra-keybindings)
 
-(setq my-try-new-things t)
-
 ;; Load all packages
 (dolist (file (directory-files packages-dir t "^[^#].*el$"))
   (when (file-regular-p file)
