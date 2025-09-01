@@ -5,10 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("01f347a923dd21661412d4c5a7c7655bf17fb311b57ddbdbd6fce87bd7e58de6" default))
- '(package-selected-packages
-   '(anzu cider consult deadgrep diminish expand-region fennel-mode git-timemachine
-          gptel ledger-mode magit markdown-mode multiple-cursors orderless
-          org-roam paredit pikchr-mode smex spacemacs-theme vertico)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
