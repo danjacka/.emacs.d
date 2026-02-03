@@ -14,3 +14,5 @@
     (-let [(original replacement command) it]
       (define-key paredit-mode-map (read-kbd-macro original) nil)
       (define-key paredit-mode-map (read-kbd-macro replacement) command))))
+
+(provide 'setup-paredit)
