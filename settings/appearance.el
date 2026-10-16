@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; ;; split horizontally (left/right) by default
 ;; (setq split-height-threshold nil) ;; do not split windows vertically (up/down)
 ;; (let* ((screen-width (display-pixel-width))

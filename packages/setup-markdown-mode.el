@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 (use-package markdown-mode
   :init
   (add-hook 'markdown-mode-hook 'auto-fill-mode))

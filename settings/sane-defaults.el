@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; No splash screen
 (setq inhibit-startup-screen t)
 

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; .emacs.d structure based on https://github.com/magnars/emacsd-reboot
 
 ;; Add settings to load-path

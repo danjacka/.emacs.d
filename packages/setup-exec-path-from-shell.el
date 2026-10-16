@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; Copy env vars from the shell
 (use-package exec-path-from-shell
   :config

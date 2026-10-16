@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; Ledger is a command line accounting tool that provides double-entry
 ;; accounting based on a text journal.  It provides no bells or whistles,
 ;; and returns the user to the days before user interfaces were even a

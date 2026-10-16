@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; Manipulating the contents of a buffer
 
 ;; Revert entire buffer without any fuss

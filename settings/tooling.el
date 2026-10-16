@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 (use-package s)
 (use-package dash)
 (use-package diminish)

@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 (use-package clojure-mode
   :custom
   ;; Ignore comment wrappers for defun-level commands

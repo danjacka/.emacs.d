@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; gptel is a simple LLM client for Emacs
 
 (use-package gptel

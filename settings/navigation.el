@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; Moving the cursor around
 
 ;; Navigate between windows using shift + arrow key

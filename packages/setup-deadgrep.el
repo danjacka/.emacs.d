@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ;; Deadgrep
 ;;
 ;; The fast, beautiful text search that your Emacs deserves.

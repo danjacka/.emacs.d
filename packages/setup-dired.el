@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 ; enable loading new directory in the existing dired buffer
 (put 'dired-find-alternate-file 'disabled nil)
 

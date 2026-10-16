@@ -1,3 +1,4 @@
+;; -*- lexical-binding: nil -*-
 (use-package org
   :ensure nil
   :defer t
